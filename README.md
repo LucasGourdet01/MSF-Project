@@ -26,7 +26,7 @@ This project implements a full medallion architecture (Bronze → Silver → Gol
 pip install -r requirements.txt
 ```
 
-2. **Create a Files folder where you will the CSV and db files**
+2. **Create a Files folder where you will upload the CSV and db files**
 
 3. **Create a `config.py` file in the project root**
 
