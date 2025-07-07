@@ -2,14 +2,15 @@ import pandas as pd
 import requests
 import time
 from pathlib import Path
+from config import ROOT_DIR, EXCHANGE_API_KEY
 
 # === Load silver_expenses ===
-root_dir = Path(r"C:\Users\lucas\OneDrive\Documents\MSF Project\Files")
+root_dir = ROOT_DIR
 silver_dir = root_dir / "silver_outputs"
 silver_expenses = pd.read_parquet(silver_dir / "silver_expenses.parquet")
 
 # === Setup ===
-API_KEY = "f9738606f19598144e30826b"
+API_KEY = EXCHANGE_API_KEY
 unique_currencies = silver_expenses["currency"].unique()
 
 fx_rates = []
