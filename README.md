@@ -62,11 +62,14 @@ These can be directly imported into Power BI.
 
 - Modular medallion architecture
 - Environment-based configuration via `config.py`
+- .gitignore used to prevent tracking:
+  - Secrets (config.py, .env)
+  - Data files (.parquet, .csv, .db)
+  - Images and outputs (*.png)
 - Secure handling of API keys (never stored in main scripts)
 - Clean and typed outputs with Parquet
 - Logging and print status for traceability
 - Power BI optimized dimensional modeling (`dim_date`, `dim_project`, `gold_fact`)
-
 ---
 
 ## 🔭 Future-Readiness & Production Considerations
@@ -84,5 +87,9 @@ Although time constraints limited full implementation, here’s what I would do 
 ## 🔒 Security Notes
 
 - API keys are stored in `config.py`, which is excluded from Git
+- .gitignore used to prevent tracking:
+  - Secrets (config.py, .env)
+  - Data files (.parquet, .csv, .db)
+  - Images and outputs (*.png)
 - Always avoid hardcoding secrets or paths in scripts
 - Sensitive configuration should be handled via `.env` or secret managers in production

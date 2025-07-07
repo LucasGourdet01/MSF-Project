@@ -1,1 +1,8 @@
+# Exclude sensitive and large data files
 config.py
+.env
+_pycache_/
+*.parquet
+*.db
+*.csv
+*.png
